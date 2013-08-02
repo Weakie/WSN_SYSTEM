@@ -1,0 +1,19 @@
+//不优化
+cl -I C:\Users\dell\Desktop\JNITest\include -I C:\Users\dell\Desktop\JNITest\include\win32  -LD algorithm_jni_JNIPSO.cpp -FeJNIPSO.dll
+
+
+//优化代码速度
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\JNITest\include -I C:\Users\dell\Desktop\JNITest\include\win32  -LD algorithm_jni_JNIPSO.cpp -FeJNIPSO.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\JNITest\include -I C:\Users\dell\Desktop\JNITest\include\win32  -LD -MT algorithm_jni_JNIPSO.cpp -FeJNIPSO.dll
+
+java -D java.library.path=. HelloWorld
+
+
+
+MD多线程会有依赖MSVCR90.dll  去掉  或者改成MT
+
+
+
+C:\Users\dell\Desktop\jni\PSO>
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\JNITest\include -I C:\Users\dell\Desktop\JNITest\include\win32  -LD -MT algorithm_jni_JNIPSO.cpp -FeE:\MyDLLFile\JNIPSO.dll

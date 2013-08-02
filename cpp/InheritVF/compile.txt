@@ -1,0 +1,26 @@
+//不优化
+cl -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD algorithm_jni_multi_JNIInheritVirtureForce.cpp -FeJNIINHERITVF.dll
+
+//优化代码速度
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD algorithm_jni_multi_JNIInheritVirtureForce.cpp -FeJNIINHERITVF.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT algorithm_jni_multi_JNIInheritVirtureForce.cpp -FeJNIINHERITVF.dll
+
+
+
+
+java -D java.library.path=. HelloWorld
+MD多线程会有依赖MSVCR90.dll  去掉  或者改成MT
+
+C:\Users\dell\Desktop\jni\InheritVF
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT algorithm_jni_multi_JNIInheritVirtureForce.cpp -FeE:\MyDLLFile\JNIINHERITVF.dll
+
+
+
+
+
+//--------------------
+javap -s -p algorithm.jni.JNIPSO
+显示对象成员域
+javah -jni algorithm.jni.JNIPSO
+生成头文件

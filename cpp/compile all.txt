@@ -1,0 +1,39 @@
+copy E:\cppCode\InheritBase\InheritBase\algorithm_jni_multi_JNIInheritBase.cpp C:\Users\dell\Desktop\jni\InheritBase\algorithm_jni_multi_JNIInheritBase.cpp
+yes
+
+copy E:\cppCode\InheritVF\InheritVF\algorithm_jni_multi_JNIInheritVirtureForce.cpp C:\Users\dell\Desktop\jni\InheritVF\algorithm_jni_multi_JNIInheritVirtureForce.cpp
+
+
+
+cd C:\Users\dell\Desktop\jni
+
+c:
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\PSOVF\algorithm_jni_multi_JNIPSOVirtureForce.cpp -FeE:\MyDLLFile\JNIPSOVF.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\PSOBase\algorithm_jni_multi_JNIPSOBase.cpp -FeE:\MyDLLFile\JNIPSOBase.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\PSO\algorithm_jni_JNIPSO.cpp -FeE:\MyDLLFile\JNIPSO.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\APSO\algorithm_jni_multi_JNIAPSO.cpp -FeE:\MyDLLFile\JNIAPSO.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\InheritVF\algorithm_jni_multi_JNIInheritVirtureForce.cpp -FeE:\MyDLLFile\JNIINHERITVF.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\InheritBase\algorithm_jni_multi_JNIInheritBase.cpp -FeE:\MyDLLFile\JNIINHERITBASE.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\CAPSO\algorithm_jni_multi_JNICAPSO.cpp -FeE:\MyDLLFile\JNICAPSO.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\CPSO\algorithm_jni_multi_JNICPSO.cpp -FeE:\MyDLLFile\JNICPSO.dll
+
+cl -O2 -Oi -GL -I C:\Users\dell\Desktop\jni\include -I C:\Users\dell\Desktop\jni\include\win32  -LD -MT C:\Users\dell\Desktop\jni\CAPSOVF\algorithm_jni_multi_JNICAPSOVirtureForce.cpp -FeE:\MyDLLFile\JNICAPSOVF.dll
+
+
+
+
+
+
+//--------------------
+javap -s -p algorithm.jni.JNIPSO
+显示对象成员域
+javah -jni algorithm.jni.JNIPSO
+生成头文件
